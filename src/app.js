@@ -23,23 +23,25 @@ function formatdate(date) {
 
 function showTemp(response) {
   console.log(response.data);
-  document.querySelector("h2").innerHTML = response.data.name;
+  document.querySelector("h2").innerHTML = response.data.city;
   let citytemp = document.querySelector("#temp");
-  citytemp.innerHTML = Math.round(response.data.main.temp);
+  citytemp.innerHTML = Math.round(response.data.temperature.current);
   let conditionsCity = document.querySelector("#cloud");
-  conditionsCity.innerHTML = response.data.weather[0].main;
+  conditionsCity.innerHTML = response.data.condition.description;
   let hightemp = document.querySelector("#highest");
-  hightemp.innerHTML = "H: " + Math.round(response.data.main.temp_max) + "°";
+  hightemp.innerHTML =
+    "H: " + Math.round(response.data.temperature.pressure) + "°";
   let lowtemp = document.querySelector("#lowest");
-  lowtemp.innerHTML = "L: " + Math.round(response.data.main.temp_min) + "°";
+  lowtemp.innerHTML =
+    "L: " + Math.round(response.data.temperature.humidity) + "°";
 }
 
 function entercity(event) {
   event.preventDefault();
   let cityinput = document.querySelector("#Search-city").value;
 
-  let apiKey = "&appid=4dd5070f619df286cb5eef7a02d06ffc";
-  let keyUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
+  let apiKey = "&key=0do03079aa87b76e5601f032b94bt858";
+  let keyUrl = "https://api.shecodes.io/weather/v1/current?query=";
   let units = "&units=metric";
   let fullUrl = keyUrl + cityinput + apiKey + units;
   axios.get(fullUrl).then(showTemp);
@@ -53,10 +55,10 @@ function showPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
 
-  let apiKey = "appid=4dd5070f619df286cb5eef7a02d06ffc";
-  let keyUrl = "https://api.openweathermap.org/data/2.5/weather?";
+  let apiKey = "key=0do03079aa87b76e5601f032b94bt858";
+  let keyUrl = "https://api.shecodes.io/weather/v1/current?";
   let units = "units=metric";
-  let newUrl = `${keyUrl}lat=${latitude}&lon=${longitude}&${apiKey}&${units}`;
+  let newUrl = `${keyUrl}lon=${longitude}&lat=${latitude}&${apiKey}&${units}`;
   axios.get(newUrl).then(showTemp);
 }
 

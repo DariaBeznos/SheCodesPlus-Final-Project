@@ -21,70 +21,44 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <h1>Weather forecast</h1>
     <div class="container">
-      <form id="searchcity-form">
-        <input
-          type="search"
-          name="Search city"
-          id="Search-city"
-          placeholder="Search city"
-          required
-        />
-        <input type="submit" id="submit" />
-      </form>
-      <br />
-      <form id="search-Current-city">
-        <input
-          type="button"
-          value="Current city"
-          id="Current-city"
-          placeholder="Current location"
-        />
-      </form>
-      <br />
-      <h2></h2>
-      <span class="temp" id="temp"> </span>
-      <span class="units">
-        <a href="#" id="celsius"> °C </a> /
-        <a href="#" id="fahrenheit"> °F </a>
-      </span>
-      <span class="weather"> 🌧 </span>
-      <h4></h4>
-      <div class="cloud" id="cloud"></div>
-      <span class="HL" id="highest"> </span>
-      <span class="HL" id="lowest"> </span>
+      <h1>Weather forecast</h1>
 
-      <h3>5 days forecast:</h3>
-      <div class="container text-center">
-        <div class="row">
-          <div class="col">
-            Monday
-            <div class="col">☀️</div>
-            <div class="col">19°-26°</div>
-          </div>
-          <div class="col">
-            Tuesday
-            <div class="col">☀️</div>
-            <div class="col">13°-21°</div>
-          </div>
-
-          <div class="col">
-            Wednesday
-            <div class="col">☀️</div>
-            <div class="col">12°-21°</div>
-          </div>
-          <div class="col">
-            Thursday
-            <div class="col">🌤</div>
-            <div class="col">12°-19°</div>
-          </div>
-          <div class="col">
-            Friday
-            <div class="col">☁️</div>
-            <div class="col">10°-18°</div>
+      <div class="weatherApp">
+        <form id="searchcity-form">
+          <input
+            type="search"
+            name="Search city"
+            id="Search-city"
+            placeholder="Search city"
+            required
+          />
+          <input type="submit" id="submit" />
+        </form>
+        <br />
+        <form id="search-Current-city">
+          <input
+            type="button"
+            value="Current city"
+            id="Current-city"
+            placeholder="Current location"
+          />
+        </form>
+        <br />
+        <h2></h2>
+        <div class="d-flex weather">🌧</div>
+        <h4></h4>
+        <div class="d-flex weather-prediction">
+          <div class="temp" id="temp"></div>
+          <div class="units">
+            <a href="#" id="celsius"> °C </a> /
+            <a href="#" id="fahrenheit"> °F </a>
           </div>
         </div>
+
+        <div class="cloud" id="cloud"></div>
+        <div class="HL" id="highest"></div>
+        <div class="HL" id="lowest"></div>
       </div>
     </div>
     <br />

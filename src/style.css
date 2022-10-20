@@ -1,31 +1,64 @@
+.weatherApp {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+}
+body {
+  background: url(SCPcloudy.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
 h1 {
-  color: red;
+  color: white;
   text-align: center;
   font-family: "Amatic SC", cursive;
   font-size: 70px;
 }
-h3 {
-  color: #f76b8a;
-  text-align: left;
-  font-size: 20px;
-  margin-top: 80px;
-}
 h2 {
-  color: #f76b8a;
+  color: white;
   font-size: 35px;
+  text-align: center;
+}
+h4 {
+  color: white;
+  text-align: center;
+}
+.temp {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+}
+.weather-prediction {
+  display: block;
+  text-align: center;
+  position: relative;
+}
+.cloud {
+  color: white;
+  display: block;
   text-align: center;
 }
 .weather {
-  font-size: 35px;
+  font-size: 45px;
   display: block;
+  text-align: center;
 }
 .HL {
-  color: #f76b8a;
-  display: block;
-  margin: 0 auto;
+  color: white;
 }
 .codedbyme {
+  font-size: 15px;
+  max-width: 300px;
+  margin: 80px auto;
+  padding: 9px;
   text-align: center;
   display: block;
-  color: #f76b8a;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
 }
