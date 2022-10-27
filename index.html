@@ -23,42 +23,44 @@
   <body>
     <div class="container">
       <h1>Weather forecast</h1>
-
+      <h4></h4>
       <div class="weatherApp">
-        <form id="searchcity-form">
-          <input
-            type="search"
-            name="Search city"
-            id="Search-city"
-            placeholder="Search city"
-            required
-          />
-          <input type="submit" id="submit" />
-        </form>
+        <div class="d-flex buttons">
+          <form id="searchcity-form">
+            <input
+              type="search"
+              name="Search city"
+              id="Search-city"
+              placeholder="Search city"
+              required
+            />
+            <input type="submit" value="🔎" id="submit" class="submitbutton" />
+          </form>
+          <form id="search-Current-city">
+            <input
+              type="button"
+              value="Current city"
+              id="Current-city"
+              placeholder="Current location"
+            />
+          </form>
+        </div>
         <br />
-        <form id="search-Current-city">
-          <input
-            type="button"
-            value="Current city"
-            id="Current-city"
-            placeholder="Current location"
-          />
-        </form>
-        <br />
-        <h2></h2>
-        <div class="d-flex weather">🌧</div>
-        <h4></h4>
-        <div class="d-flex weather-prediction">
+        <div class="d-flex weathericon">
+          <span id="weathericon"> 🌧</span>
+          <h2></h2>
+        </div>
+        <div class="d-flex weather-temperature">
           <div class="temp" id="temp"></div>
-          <div class="units">
+          <span class="units">
             <a href="#" id="celsius"> °C </a> /
             <a href="#" id="fahrenheit"> °F </a>
-          </div>
+          </span>
         </div>
 
         <div class="cloud" id="cloud"></div>
-        <div class="HL" id="highest"></div>
-        <div class="HL" id="lowest"></div>
+        <span class="HL" id="pressure"></span>
+        <span class="HL" id="humidity"></span>
       </div>
     </div>
     <br />

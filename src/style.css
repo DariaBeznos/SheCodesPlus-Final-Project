@@ -1,6 +1,6 @@
 .weatherApp {
   max-width: 900px;
-  margin: 40px auto;
+  margin: 20px auto;
   padding: 40px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
@@ -12,26 +12,28 @@ body {
   background-size: cover;
 }
 h1 {
-  color: white;
+  color: #f2f1e7;
   text-align: center;
   font-family: "Amatic SC", cursive;
   font-size: 70px;
 }
 h2 {
-  color: white;
+  color: #f2f1e7;
   font-size: 35px;
+  display: block;
   text-align: center;
+  margin: 5px 0 0 5px;
 }
 h4 {
-  color: white;
+  color: #f2f1e7;
   text-align: center;
 }
 .temp {
-  color: white;
+  color: #f2f1e7;
   text-align: center;
   font-size: 40px;
 }
-.weather-prediction {
+.weather-temperature {
   display: block;
   text-align: center;
   position: relative;
@@ -41,7 +43,7 @@ h4 {
   display: block;
   text-align: center;
 }
-.weather {
+.weathericon {
   font-size: 45px;
   display: block;
   text-align: center;
@@ -52,7 +54,7 @@ h4 {
 .codedbyme {
   font-size: 15px;
   max-width: 300px;
-  margin: 80px auto;
+  margin: 40px auto;
   padding: 9px;
   text-align: center;
   display: block;
@@ -63,7 +65,25 @@ h4 {
   backdrop-filter: blur(5px);
 }
 input[type="submit"] {
-  background-color: beige;
-  border-radius: 5px;
+  background-color: #f2f1e7;
+  border-radius: 8px;
   border-color: rgba(255, 255, 255, 0.2);
+}
+input[type="search"] {
+  background-color: #f2f1e7;
+  border-radius: 8px;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+input[type="button"] {
+  background-color: #f2f1e7;
+  border-radius: 10px;
+  border-color: rgba(255, 255, 255, 0.2);
+  margin-left: 5px;
+}
+.weather-temperature .units {
+  color: #f2f1e7;
+  font-size: 10px;
+  top: 10px;
+  margin: 15px 0 0 5px;
 }

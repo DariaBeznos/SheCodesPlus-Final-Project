@@ -23,17 +23,18 @@ function formatdate(date) {
 
 function showTemp(response) {
   console.log(response.data);
-  document.querySelector("h2").innerHTML = response.data.city;
+  document.querySelector("h2").innerHTML =
+    response.data.city + ", " + response.data.country;
+
   let citytemp = document.querySelector("#temp");
   citytemp.innerHTML = Math.round(response.data.temperature.current);
   let conditionsCity = document.querySelector("#cloud");
   conditionsCity.innerHTML = response.data.condition.description;
-  let hightemp = document.querySelector("#highest");
-  hightemp.innerHTML =
-    "H: " + Math.round(response.data.temperature.pressure) + "°";
-  let lowtemp = document.querySelector("#lowest");
-  lowtemp.innerHTML =
-    "L: " + Math.round(response.data.temperature.humidity) + "°";
+  let pressure = document.querySelector("#pressure");
+  pressure.innerHTML =
+    "Pressure: " + Math.round(response.data.temperature.pressure) + "%";
+  document.querySelector("#humidity").innerHTML =
+    "Humidity: " + Math.round(response.data.temperature.humidity) + "%";
 }
 
 function entercity(event) {
