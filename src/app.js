@@ -35,6 +35,13 @@ function showTemp(response) {
     "Pressure: " + Math.round(response.data.temperature.pressure) + "%";
   document.querySelector("#humidity").innerHTML =
     "Humidity: " + Math.round(response.data.temperature.humidity) + "%";
+
+  document
+    .querySelector("#weathericon")
+    .setAttribute(
+      "src",
+      `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+    );
 }
 
 function entercity(event) {
