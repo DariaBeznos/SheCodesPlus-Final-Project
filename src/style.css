@@ -38,6 +38,11 @@ h4 {
   text-align: center;
   position: relative;
 }
+.weather-temperature .active {
+  color: #915b4a;
+  cursor: default;
+  text-decoration: none;
+}
 .cloud {
   color: white;
   display: block;

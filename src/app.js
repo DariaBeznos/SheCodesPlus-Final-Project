@@ -25,9 +25,10 @@ function showTemp(response) {
   console.log(response.data);
   document.querySelector("h2").innerHTML =
     response.data.city + ", " + response.data.country;
+  celsiustemp = response.data.temperature.current;
 
   let citytemp = document.querySelector("#temp");
-  citytemp.innerHTML = Math.round(response.data.temperature.current);
+  citytemp.innerHTML = Math.round(celsiustemp);
   let conditionsCity = document.querySelector("#cloud");
   conditionsCity.innerHTML = response.data.condition.description;
   let pressure = document.querySelector("#pressure");
@@ -74,9 +75,28 @@ function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
+function showfahrenheit(change) {
+  change.preventDefault();
+  let fahrenheittemp = (celsiustemp * 9) / 5 + 32;
+  document.querySelector("#temp").innerHTML = Math.round(fahrenheittemp);
+  document.querySelector("#celsius").classList.remove("active");
+  document.querySelector("#fahrenheit").classList.add("active");
+}
+function celsiuslink(changecelsius) {
+  changecelsius.preventDefault();
+  document.querySelector("#temp").innerHTML = Math.round(celsiustemp);
+  document.querySelector("#celsius").classList.add("active");
+  document.querySelector("#fahrenheit").classList.remove("active");
+}
+
 let nowdate = document.querySelector("h4");
 let nowtime = new Date();
 nowdate.innerHTML = formatdate(nowtime);
 
 let currentbutton = document.querySelector("#Current-city");
 currentbutton.addEventListener("click", getCurrentPosition);
+
+document.querySelector("#fahrenheit").addEventListener("click", showfahrenheit);
+let celsiustemp = null;
+
+document.querySelector("#celsius").addEventListener("click", celsiuslink);
