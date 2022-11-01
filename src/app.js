@@ -21,6 +21,36 @@ function formatdate(date) {
   return `${day} , ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let FCelement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+
+  let fcHTML = `<div class="row">`;
+
+  days.forEach(function (day) {
+    fcHTML =
+      fcHTML +
+      `
+        <div class="col-2">
+          <div class="weatherFCday">${day}</div>
+          <img
+            src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png"
+            alt=""
+            width="22"
+          />
+          <div class="weatherFCtemp">
+            <span class="weatherFChighest"> 18 </span>
+            <span class="weatherFClowest"> 12 </span>
+          </div>
+        </div>
+      </div>`;
+  });
+
+  fcHTML = fcHTML + `</div>`;
+  FCelement.innerHTML = fcHTML;
+}
+
 function showTemp(response) {
   console.log(response.data);
   document.querySelector("h2").innerHTML =
@@ -100,3 +130,4 @@ document.querySelector("#fahrenheit").addEventListener("click", showfahrenheit);
 let celsiustemp = null;
 
 document.querySelector("#celsius").addEventListener("click", celsiuslink);
+displayForecast();

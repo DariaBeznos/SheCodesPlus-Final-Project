@@ -92,6 +92,11 @@ input[type="button"] {
   margin: 15px 0 0 5px;
 }
 
-.weatherFCtemp1 {
+.weatherFCtemp {
   color: #f2f1e7;
+}
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
 }
