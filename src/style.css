@@ -91,3 +91,7 @@ input[type="button"] {
   top: 10px;
   margin: 15px 0 0 5px;
 }
+
+.weatherFCtemp1 {
+  color: #f2f1e7;
+}
