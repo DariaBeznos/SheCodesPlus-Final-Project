@@ -21,7 +21,8 @@ function formatdate(date) {
   return `${day} , ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let FCelement = document.querySelector("#forecast");
 
   let days = ["Thu", "Fri", "Sat", "Sun"];
@@ -43,12 +44,18 @@ function displayForecast() {
             <span class="weatherFChighest"> 18 </span>
             <span class="weatherFClowest"> 12 </span>
           </div>
-        </div>
       </div>`;
   });
 
   fcHTML = fcHTML + `</div>`;
   FCelement.innerHTML = fcHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "0do03079aa87b76e5601f032b94bt858";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function showTemp(response) {
@@ -73,6 +80,9 @@ function showTemp(response) {
       "src",
       `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
     );
+
+  console.log(response.data);
+  getForecast(response.data.coordinates);
 }
 
 function entercity(event) {
@@ -89,7 +99,6 @@ function entercity(event) {
 let search = document.querySelector("#searchcity-form");
 search.addEventListener("submit", entercity);
 
-///bonus points attempt
 function showPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
@@ -130,4 +139,3 @@ document.querySelector("#fahrenheit").addEventListener("click", showfahrenheit);
 let celsiustemp = null;
 
 document.querySelector("#celsius").addEventListener("click", celsiuslink);
-displayForecast();
