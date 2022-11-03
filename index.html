@@ -35,8 +35,7 @@
               required
             />
             <span class="submitbutton">
-              <i class="bi bi-search-heart-fill"></i>
-              <input type="submit" id="submit" value=" " />
+              <input type="submit" id="submit" value=" Here" />
             </span>
           </form>
           <form id="search-Current-city">
@@ -52,28 +51,30 @@
         <div class="d-flex weathericon">
           <img
             id="weathericon"
-            class="float-left"
+            class="weathericon"
             src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
           />
-          <h2>Amsterdam</h2>
+          <h2></h2>
         </div>
-        <div class="d-flex weather-temperature">
-          <div class="temp" id="temp"></div>
-          <span class="units">
-            <a href="#" id="celsius" class="active"> °C </a> /
-            <a href="#" id="fahrenheit"> F </a>
-          </span>
-        </div>
-
-        <div class="cloud" id="cloud"></div>
-        <span class="HL" id="wind"></span>
-        <span class="HL" id="humidity"></span>
-      </div>
+        <div class="d-flex dailytoday">
+          <div class="d-flex weather-temperature">
+            <div class="temp" id="temp"></div>
+            <span class="units">
+              <a href="#" id="celsius" class="active"> °C </a> 
+              <a href="#" id="fahrenheit" class="passive"> F </a>
+            </span>
+          </div>
+          <div class="cloud" id="cloud"></div>
+          </div>
+          <span class="HL" id="wind"></span>
     </div>
     <div class="weather-forecast" id="forecast"></div>
     <br />
     <span class="codedbyme"
-      ><a href="https://github.com/DariaBeznos/SheCodesPlus-Final-Project">
+      ><a
+        href="https://github.com/DariaBeznos/SheCodesPlus-Final-Project"
+        class="opensource"
+      >
         Open-source code
       </a>
       by Daria Beznos
