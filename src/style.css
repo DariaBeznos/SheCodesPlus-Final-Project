@@ -6,6 +6,9 @@
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 body {
   background: url(SCPcloudy.jpg) no-repeat center center fixed;
@@ -80,6 +83,14 @@ h4 {
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.codedbyme:hover {
+  background: rgba(255, 255, 255, 0.6);
+  color: #915b4a;
 }
 .submitbutton {
   background-color: #f2f1e7;
@@ -134,10 +145,18 @@ input[type="button"]:hover {
   max-width: 900px;
   border-radius: 15px;
   font-family: "Mali", cursive;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.card:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: #915b4a;
+  transition: 300ms ease-in-out;
 }
 .weatherFChighest {
   font-size: 22px;
 }
 .opensource {
-  color: #915b4a;
+  color: #f2f1e7;
 }
