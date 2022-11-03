@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
@@ -34,7 +34,10 @@
               placeholder="Search city"
               required
             />
-            <input type="submit" value="🔎" id="submit" class="submitbutton" />
+            <span class="submitbutton">
+              <i class="bi bi-search-heart-fill"></i>
+              <input type="submit" id="submit" value=" " />
+            </span>
           </form>
           <form id="search-Current-city">
             <input
@@ -47,19 +50,23 @@
         </div>
         <br />
         <div class="d-flex weathericon">
-          <img id="weathericon" class="float-left" src="" />
-          <h2></h2>
+          <img
+            id="weathericon"
+            class="float-left"
+            src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+          />
+          <h2>Amsterdam</h2>
         </div>
         <div class="d-flex weather-temperature">
           <div class="temp" id="temp"></div>
           <span class="units">
             <a href="#" id="celsius" class="active"> °C </a> /
-            <a href="#" id="fahrenheit"> °F </a>
+            <a href="#" id="fahrenheit"> F </a>
           </span>
         </div>
 
         <div class="cloud" id="cloud"></div>
-        <span class="HL" id="pressure"></span>
+        <span class="HL" id="wind"></span>
         <span class="HL" id="humidity"></span>
       </div>
     </div>

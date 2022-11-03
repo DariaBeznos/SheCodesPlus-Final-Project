@@ -31,21 +31,20 @@ function displayForecast(response) {
   let forecast = response.data.daily;
   let FCelement = document.querySelector("#forecast");
 
-  console.log(forecast);
   let fcHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
+    if (index < 5) {
       fcHTML =
         fcHTML +
         `
         <div class="col-2">
+        <div class="card"> 
           <div class="weatherFCday">${formatday(forecastDay.time)}</div>
           <img
             src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
               forecastDay.condition.icon
             }.png"
             alt=""
-            width="20"
           />
           <div class="weatherFCtemp">
             <span class="weatherFChighest"> ${Math.round(
@@ -54,6 +53,7 @@ function displayForecast(response) {
             <span class="weatherFClowest"> ${Math.round(
               forecastDay.temperature.minimum
             )}° </span>
+          </div>
           </div>
       </div>`;
     }
@@ -66,12 +66,10 @@ function displayForecast(response) {
 function getForecast(coordinates) {
   let apiKey = "0do03079aa87b76e5601f032b94bt858";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 
 function showTemp(response) {
-  console.log(response.data);
   document.querySelector("h2").innerHTML =
     response.data.city + ", " + response.data.country;
   celsiustemp = response.data.temperature.current;
@@ -80,9 +78,8 @@ function showTemp(response) {
   citytemp.innerHTML = Math.round(celsiustemp);
   let conditionsCity = document.querySelector("#cloud");
   conditionsCity.innerHTML = response.data.condition.description;
-  let pressure = document.querySelector("#pressure");
-  pressure.innerHTML =
-    "Pressure: " + Math.round(response.data.temperature.pressure) + "%";
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = "Wind: " + Math.round(response.data.wind.speed) + "km/h";
   document.querySelector("#humidity").innerHTML =
     "Humidity: " + Math.round(response.data.temperature.humidity) + "%";
 
