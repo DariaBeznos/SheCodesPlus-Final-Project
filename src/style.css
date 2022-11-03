@@ -23,8 +23,8 @@ h1 {
 h2 {
   color: #f2f1e7;
   font-size: 40px;
-  position: relative;
-  margin-bottom: 10px;
+  text-align: center;
+  margin-top: 90px;
   font-family: "Mali", cursive;
   margin: 5px 0 0 5px;
 }
@@ -37,13 +37,13 @@ h4 {
 .temp {
   color: #f2f1e7;
   text-align: center;
-  font-size: 40px;
+  display: block;
+  font-size: 60px;
   font-family: "Mali", cursive;
 }
 .weather-temperature {
   display: block;
   text-align: center;
-  position: relative;
   font-family: "Mali", cursive;
 }
 .weather-temperature .active {
@@ -58,7 +58,8 @@ h4 {
 }
 .cloud {
   color: #f2f1e7;
-  position: relative;
+  text-align: center;
+  margin: 10px 10px 30px 10px;
   text-transform: capitalize;
   font-family: "Mali", cursive;
 }
@@ -66,9 +67,22 @@ h4 {
   size: 90px;
   position: relative;
 }
-.HL {
+
+.wind {
+  position: absolute;
+  bottom: 20px;
+  left: 200px;
   color: white;
   font-family: "Mali", cursive;
+  font-size: 16px;
+}
+.humid {
+  color: white;
+  font-family: "Mali", cursive;
+  position: absolute;
+  bottom: 20px;
+  right: 200px;
+  font-size: 16px;
 }
 .codedbyme {
   font-size: 15px;
