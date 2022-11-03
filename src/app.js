@@ -18,12 +18,12 @@ function formatdate(date) {
   ];
   let day = days[date.getDay()];
 
-  return `${day} , ${hours}:${minutes}`;
+  return ` Last updated: ${day} , ${hours}:${minutes}`;
 }
 function formatday(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   return days[day];
 }
 
@@ -94,15 +94,17 @@ function showTemp(response) {
   getForecast(response.data.coordinates);
 }
 
-function entercity(event) {
-  event.preventDefault();
-  let cityinput = document.querySelector("#Search-city").value;
-
+function searchnew(city) {
   let apiKey = "&key=0do03079aa87b76e5601f032b94bt858";
   let keyUrl = "https://api.shecodes.io/weather/v1/current?query=";
   let units = "&units=metric";
-  let fullUrl = keyUrl + cityinput + apiKey + units;
+  let fullUrl = keyUrl + city + apiKey + units;
   axios.get(fullUrl).then(showTemp);
+}
+function entercity(enter) {
+  enter.preventDefault();
+  let cityinput = document.querySelector("#Search-city");
+  searchnew(cityinput.value);
 }
 
 let search = document.querySelector("#searchcity-form");
@@ -122,19 +124,20 @@ function showPosition(position) {
 function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
+searchnew("Amsterdam");
 
 function showfahrenheit(change) {
   change.preventDefault();
   let fahrenheittemp = (celsiustemp * 9) / 5 + 32;
   document.querySelector("#temp").innerHTML = Math.round(fahrenheittemp);
-  document.querySelector("#celsius").classList.remove("active");
+  document.querySelector("#celsius").classList.add("passive");
   document.querySelector("#fahrenheit").classList.add("active");
 }
 function celsiuslink(changecelsius) {
   changecelsius.preventDefault();
   document.querySelector("#temp").innerHTML = Math.round(celsiustemp);
   document.querySelector("#celsius").classList.add("active");
-  document.querySelector("#fahrenheit").classList.remove("active");
+  document.querySelector("#fahrenheit").classList.add("passive");
 }
 
 let nowdate = document.querySelector("h4");
