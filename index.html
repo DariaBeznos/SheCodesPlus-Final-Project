@@ -34,7 +34,7 @@
               placeholder="Search city"
               required
             />
-              <input type="submit" class="submitbutton" id="submit" value="🔎" />
+            <input type="submit" class="submitbutton" id="submit" value="🔎" />
           </form>
           <form id="search-Current-city">
             <input
@@ -45,27 +45,23 @@
             />
           </form>
         </div>
-        <br />
-        <div class="d-flex weathericon">
+        <h2></h2>
+        <div class="d-flex weather-temperature">
+          <div class="temp" id="temp"></div>
+          <span class="units">
+            <a href="#" id="celsius" class="active"> °C </a>
+            <a href="#" id="fahrenheit" class="passive"> F </a>
+          </span>
           <img
             id="weathericon"
             class="weathericon"
             src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
           />
-          <h2></h2>
         </div>
-        <div class="d-flex dailytoday">
-          <div class="d-flex weather-temperature">
-            <div class="temp" id="temp"></div>
-            <span class="units">
-              <a href="#" id="celsius" class="active"> °C </a> 
-              <a href="#" id="fahrenheit" class="passive"> F </a>
-            </span>
-          </div>
-          <div class="cloud" id="cloud"></div>
-          </div>
-          <span class="HL" id="wind"></span>
-          <span class="HL" id="humidity"></span>
+        <div class="cloud" id="cloud"></div>
+        <span class="wind" id="wind"></span>
+        <span class="humid" id="humidity"></span>
+      </div>
     </div>
     <div class="weather-forecast" id="forecast"></div>
     <br />
