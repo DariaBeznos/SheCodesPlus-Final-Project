@@ -42,9 +42,10 @@ h4 {
   font-family: "Mali", cursive;
 }
 .weather-temperature {
-  display: block;
-  text-align: center;
   font-family: "Mali", cursive;
+  justify-content: center;
+  margin: 5px 5px;
+  font-size: 20px;
 }
 .weather-temperature .active {
   color: #f2f1e7;
@@ -59,7 +60,7 @@ h4 {
 .cloud {
   color: #f2f1e7;
   text-align: center;
-  margin: 10px 10px 30px 10px;
+  margin: 1px 10px 30px 10px;
   text-transform: capitalize;
   font-family: "Mali", cursive;
 }
@@ -151,12 +152,13 @@ input[type="button"]:hover {
   font-size: 19px;
 }
 .card {
-  margin: 0 auto;
-  text-align: center;
+  display: flex;
+  justify-content: center;
   color: #f2f1e7;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.2);
-  max-width: 900px;
+  max-width: 90px;
+  padding: 5px;
   border-radius: 15px;
   font-family: "Mali", cursive;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
