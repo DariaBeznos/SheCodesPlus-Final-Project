@@ -17,7 +17,7 @@ body {
 h1 {
   color: #f2f1e7;
   text-align: center;
-  font-family: "Mali", cursive;
+  font-family: "Hind Siliguri", sans-serif;
   font-size: 70px;
 }
 h2 {
@@ -25,13 +25,13 @@ h2 {
   font-size: 40px;
   text-align: center;
   margin-top: 90px;
-  font-family: "Mali", cursive;
+  font-family: "Hind Siliguri", sans-serif;
   margin: 5px 0 0 5px;
 }
 h4 {
   color: #f2f1e7;
   text-align: center;
-  font-family: "Mali", cursive;
+  font-family: "Hind Siliguri", sans-serif;
   font-size: 20px;
 }
 .temp {
@@ -39,10 +39,10 @@ h4 {
   text-align: center;
   display: block;
   font-size: 60px;
-  font-family: "Mali", cursive;
+  font-family: "Hind Siliguri", sans-serif;
 }
 .weather-temperature {
-  font-family: "Mali", cursive;
+  font-family: "Hind Siliguri", sans-serif;
   justify-content: center;
   margin: 5px 5px;
   font-size: 20px;
@@ -62,7 +62,7 @@ h4 {
   text-align: center;
   margin: 1px 10px 30px 10px;
   text-transform: capitalize;
-  font-family: "Mali", cursive;
+  font-family: "Hind Siliguri", sans-serif;
 }
 .weathericon {
   size: 90px;
@@ -74,12 +74,12 @@ h4 {
   bottom: 20px;
   left: 200px;
   color: white;
-  font-family: "Mali", cursive;
+  font-family: "Hind Siliguri", sans-serif;
   font-size: 16px;
 }
 .humid {
   color: white;
-  font-family: "Mali", cursive;
+  font-family: "Hind Siliguri", sans-serif;
   position: absolute;
   bottom: 20px;
   right: 200px;
@@ -89,7 +89,7 @@ h4 {
   font-size: 15px;
   max-width: 300px;
   margin: 40px auto;
-  font-family: "Mali", cursive;
+  font-family: "Hind Siliguri", sans-serif;
   padding: 9px;
   text-align: center;
   display: block;
@@ -119,11 +119,15 @@ h4 {
   transition: 300ms ease-in-out;
 }
 input[type="search"] {
-  background-color: #f2f1e7;
+  background-color: transparent;
   border-color: rgba(255, 255, 255, 0.2);
-  font-family: "Mali", cursive;
+  font-family: "Hind Siliguri", sans-serif;
   border-radius: 15px;
+  color: #f2f1e7;
   width: 200px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
 input[type="button"] {
@@ -131,13 +135,19 @@ input[type="button"] {
   border-radius: 10px;
   border-color: rgba(255, 255, 255, 0.2);
   margin-left: 5px;
-  font-family: "Mali", cursive;
+  font-family: "Hind Siliguri", sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 input[type="button"]:hover {
   background-color: #915b4a;
   font-size: 17px;
   transition: 300ms ease-in-out;
   color: #f2f1e7;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 .weather-temperature .units {
   color: #f2f1e7;
@@ -148,7 +158,7 @@ input[type="button"]:hover {
 
 .weatherFCtemp {
   color: #f2f1e7;
-  font-family: "Mali", cursive;
+  font-family: "Hind Siliguri", sans-serif;
   font-size: 19px;
 }
 .card {
@@ -161,7 +171,7 @@ input[type="button"]:hover {
   max-width: 90px;
   padding: 5px;
   border-radius: 15px;
-  font-family: "Mali", cursive;
+  font-family: "Hind Siliguri", sans-serif;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
     rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
